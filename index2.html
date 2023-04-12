@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CSS Grid - line-based placement starting point</title>
+    <style>
+
+        body {
+        background-color: aliceblue;  
+          width: 100vw;
+          /*max-width: 900px;*/
+          margin: 0 auto;
+          font: 14px Arial, Helvetica, sans-serif;
+          line-height:1.5em;
+
+        }
+
+    
+        header,
+      footer {
+        padding: 10px;
+      }
+
+      aside {
+        padding: 10px;
+        border-right: 1px solid #999;
+      }    
+  
+
+        .container {
+            border:solid 1px black;
+    height:100vh;       
+    background-color: aliceblue;        
+    display: grid;
+    grid-template-columns: 10vw 2fr 5fr 10vw;  
+   grid-template-rows: 1fr 5fr 50px; 
+   grid-template-areas:  
+   "header header header header"
+    ". sidebar content ."
+      "footer footer footer footer";
+    
+    gap: 20px;
+  }
+
+
+  
+  .container > * {
+
+}  
+  
+  header {
+    padding:10px;
+    background-color: black;
+    color: aliceblue;
+    grid-area: header;
+    display:flex;
+    align-items: center;
+  }
+
+  header > div {
+    width:fit-content;
+    margin:auto;
+    height: fit-content;
+    font-size:min(5vw,75px);}
+  
+  article {
+    border: solid 1px black; 
+    padding:10px;
+    background-color: aliceblue;    
+    grid-area: content;
+  }
+  
+  aside {
+    border: solid 1px black; 
+    background-color: aliceblue;   
+    grid-area: sidebar;
+  }
+  
+  footer {
+    border-top:solid 5px black;
+    background-color:blanchedalmond;   
+    grid-area: footer;
+    font-size:12px;
+  }
+
+  footer > div {margin-left:calc(10vw + 10px); 
+        width:fit-content;}
+
+
+      </style>
+  </head>
+
+  <body>
+    <div class="container">
+    
+    <header>
+        <div>This is my lovely blog</div>
+    </header>
+
+      <article>
+        <h1>My article</h1>
+        <p>
+          Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
+          porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
+          auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+          orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac
+          ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+          volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin
+          eros pharetra congue. Duis ornare egestas augue ut luctus. Proin
+          blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+          eget fermentum sapien.
+        </p>
+
+        <p>
+          Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+          malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+          facilisis sed est. Nam id risus quis ante semper consectetur eget
+          aliquam lorem. Vivamus tristique elit dolor, sed pretium metus
+          suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu
+          urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt
+          eget purus in interdum. Cum sociis natoque penatibus et magnis dis
+          parturient montes, nascetur ridiculus mus.
+        </p>
+    
+      </article>
+      <aside>
+        <h2>Other things</h2>
+        <p>
+          Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+          malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+          facilisis sed est.
+        </p>
+
+      </aside>
+      <footer>
+        <div>Contact me@mysite.com</div>
+    </footer>
+    </div>
+  </body>
+</html>
