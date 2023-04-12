@@ -10,7 +10,9 @@
           width: 90vw;
           max-width: 900px;
           margin: 2em auto;
-          font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+          font: 1.2vw Arial, Helvetica, sans-serif;
+          line-height:1.5em;
+
         }
 
     
@@ -37,7 +39,8 @@
     gap: 20px;
   }
   
-  .container > * {border-left, border-right: solid 1px black;    
+  .container > * {
+    border: solid 1px black;  }  
   
   header {
     padding:10px;
@@ -47,11 +50,11 @@
     align-items: center;
   }
 
-  header > div {width:fit-content;
-margin:auto;
-height: 100%;
-font-size:5vw;
-}
+  header > div {
+    width:fit-content;
+    margin:auto;
+    height: 100%;
+    font-size:min(5vw,80px);}
   
   article {
     padding:10px;
@@ -68,6 +71,9 @@ font-size:5vw;
     background-color: aliceblue;   
     grid-area: footer;
   }
+
+  hr {width:120%;
+    margin-left:-10%;}
 
       </style>
   </head>
@@ -103,6 +109,7 @@ font-size:5vw;
           eget purus in interdum. Cum sociis natoque penatibus et magnis dis
           parturient montes, nascetur ridiculus mus.
         </p>
+        <hr>
       </article>
       <aside>
         <h2>Other things</h2>
@@ -111,6 +118,7 @@ font-size:5vw;
           malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
           facilisis sed est.
         </p>
+        <hr>
       </aside>
       <footer>Contact me@mysite.com</footer>
     </div>
