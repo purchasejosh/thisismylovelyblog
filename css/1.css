@@ -66,3 +66,21 @@ body {
     background-color: aliceblue;   
     grid-area: footer;
   }
+
+      @media screen and (orientation:portrait) {  
+   
+                      .container {
+    height:90vh;       
+    background-color: blue;        
+    display: grid;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 3fr 1fr;      
+    gap: 20px;
+  }
+              
+}
