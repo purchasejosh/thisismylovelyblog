@@ -5,7 +5,10 @@
           margin: 0 auto;
           font: 1.2em Arial, Helvetica, sans-serif;
           line-height:1.5em;
-    width: 100vw;
+
+        }
+.container{
+             width: 100vw;
     height:100vh;               
     display: grid;
     grid-template-columns: 1fr 2fr 5fr 1fr;  
@@ -16,9 +19,7 @@
       "footer footer footer footer";
     
     gap: 20px;                  
-
-        }
-
+}
     
         header,
       footer {
@@ -34,7 +35,7 @@
 
 
   
-  body > * {
+  .container > * {
 border: solid 1px pink;
 }  
   
@@ -52,7 +53,7 @@ border: solid 1px pink;
     margin:auto;
     height: fit-content;
     font-size:min(5vw,75px);}
-  
+  z
   main, article {
     border: solid 1px black; 
     padding:10px;
