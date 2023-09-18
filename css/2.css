@@ -36,7 +36,7 @@
 
   
   .container > * {
-border: solid 1px pink;
+outline: solid 2px camel;
 }  
   
   header {
@@ -53,8 +53,8 @@ border: solid 1px pink;
     margin:auto;
     height: fit-content;
     font-size:min(5vw,75px);}
-  z
-  main, article {
+
+main, article {
     border: solid 1px black; 
     padding:10px;
     background-color: aliceblue;    
